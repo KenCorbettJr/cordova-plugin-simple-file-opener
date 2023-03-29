@@ -1,7 +1,7 @@
 /*
 The MIT License (MIT)
 
-Copyright (c) 2020 pwlin - pwlin05@gmail.com
+Copyright (c) 2023 Ken Corbett - kenneth.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -21,15 +21,17 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 // https://www.electronjs.org/docs/api/shell
-const { shell } = global.require('electron');
+const { shell } = global.require("electron");
 module.exports = {
-  open: function (onSuccess, onError, fileName) {
-    var opn = shell.openItem(fileName[0]);
-    if (opn === true) {
-      onSuccess(true);
-    } else {
-      onError({'status': 0, 'message': 'Failed opening file.'});
-    }
-  }
+  open: async function (fileName) {
+    return new Promise((resolve, reject) => {
+      const open = shell.openItem(fileName[0]);
+      if (open === true) {
+        resolve(true);
+      } else {
+        reject({ status: 0, message: "Failed opening file." });
+      }
+    });
+  },
 };
-require('cordova/exec/proxy').add('FileOpener2', module.exports);
+require("cordova/exec/proxy").add("FileOpener2", module.exports);

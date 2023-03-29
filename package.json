@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-file-opener2",
-  "version": "4.0.0",
-  "description": "A File Opener Plugin for Cordova. (The Original Version)",
+  "name": "cordova-plugin-simple-file-opener",
+  "version": "1.0.0",
+  "description": "A File Opener Plugin for Cordova that opens files in the system app for that file",
   "cordova": {
-    "id": "cordova-plugin-file-opener2",
+    "id": "cordova-plugin-simple-file-opener",
     "platforms": [
       "android",
       "ios",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pwlin/cordova-plugin-file-opener2.git"
+    "url": "https://github.com/KenCorbettJr/cordova-plugin-simple-file-opener.git"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -24,23 +24,16 @@
   ],
   "engines": {
     "cordovaDependencies": {
-      "2.0.0": {
-        "cordova": ">=6.0.0"
-      },
-      "3.0.0": {
-        "cordova": ">=7.0.0"
-      },
-      "4.0.0": {
-        "cordova-android": ">=10.0.0"
-      }
+      "cordova-android": ">=11.0.0",
+      "cordova-ios": ">=6.2.0"
     }
   },
   "author": {
-    "name": "pwlin05@gmail.com"
+    "name": "kenneth.corbett@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pwlin/cordova-plugin-file-opener2/issues"
+    "url": "https://github.com/KenCorbettJr/cordova-plugin-simple-file-opener/issues"
   },
-  "homepage": "https://github.com/pwlin/cordova-plugin-file-opener2#readme"
+  "homepage": "https://github.com/KenCorbettJr/cordova-plugin-simple-file-opener"
 }
